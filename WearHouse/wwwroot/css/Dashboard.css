@@ -1,0 +1,91 @@
+﻿.login {
+    width: 550px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #d3d3d3;
+    margin: 30px auto;
+    padding: 0px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dashb_head {
+    height: 40px;
+    background-color: whitesmoke;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 2px solid #d3d3d3;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.input_login {
+    padding: 20px;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.login_button {
+    display: inline;
+    background-color: #1e90ff;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 20%;
+    font-size: 16px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    display: inline;
+}
+
+.login_button:hover {
+    background-color: #007bff;
+}
+
+.forgot_pass {
+    display: inline;
+    color: #1e90ff;
+    text-decoration: underline;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.endend {
+    margin-left: 90px;
+}
+
+.form-control {
+    width: 70%;
+    position: relative;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #d3d3d3;
+    padding: 10px;
+    margin-bottom: 10px;
+    right: 0;
+}
+
+.email input {
+    margin-left: 50px;
+}
+
+.password input {
+    margin-left: 20px;
+}
+
+.form-label {
+    color: #52595d;
+    margin-bottom: 5px;
+}
+
+.text-danger {
+    display: block;
+    color: #dc3545;
+}

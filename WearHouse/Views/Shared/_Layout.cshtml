@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WearHouse</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/880437475c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a asp-area="" asp-controller="Home" asp-action="Index">WearHouse</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Category</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a></li>
+                <partial name="_LoginPartial" />
+
+
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <main>
+            @RenderSection("Head", required: false)
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/hnskho/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/Howters"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.youtube.com/channel/UCsKX6PKXIWSy1CNBglUndaw"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2023 Hans. All Rights Reserved
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

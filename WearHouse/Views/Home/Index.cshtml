@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Head {
+    <link rel="stylesheet" href="~/css/Dashboard.css" asp-append-version="true" />
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="row">
+        <div class="col-md-4">
+                    <div class="login">
+                        <div class="dashb_head">
+                            <div class="dashb_head_text">Dashboard</div>
+                        </div>
+                    <div class="input_login">
+                        You are logged in!
+                    </div>
+
+                    </div>
+        </div>
+       </div>
+
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <div class="login">
+                <div class="dashb_head">
+                    <div class="dashb_head_text">WearHouse</div>
+                </div>
+                <div class="input_login">
+                    Welcome!
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

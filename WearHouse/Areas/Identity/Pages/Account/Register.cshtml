@@ -1,0 +1,76 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+@section Head {
+    <link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+}
+
+<form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <p>Register</p>
+            </div>
+            <div class="form-body">
+                <div class="form-input">
+                    <label for="name">Name</label>
+                    <input asp-for="Input.Name" type="text">
+                </div>
+                <div class="danger">
+                    <span asp-validation-for="Input.Name" class="text-danger"></span>
+                </div>
+                <div class="form-input">
+                    <label for="email">Email Address</label>
+                    <input asp-for="Input.Email" type="email">
+                </div>
+                <div class="danger">
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input asp-for="Input.Password" type="password">
+                </div>
+                <div class="danger">
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </div>
+                <div class="form-input">
+                    <label for="password">Confirm Password</label>
+                    <input asp-for="Input.ConfirmPassword" type="password">
+                </div>
+                <div class="danger">
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="buttons">
+                    <div class="agree">
+                        <input type="checkbox" name="" id="checkbox">
+                        <label for="checkbox">By clicking register, I agree to the terms and conditions</label>
+                    </div>
+                    <span id="checkboxError" class="text-danger"></span>
+                    <div class="login">
+                        <button id="registerSubmit" type="submit" class="btn-blue">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+<script>
+    document.getElementById("registerSubmit").addEventListener("click", function (e) {
+        if (!document.getElementById("checkbox").checked) {
+            e.preventDefault();
+            document.getElementById("checkboxError").textContent = "You must agree to the terms and conditions.";
+        }
+    });
+</script>

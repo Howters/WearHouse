@@ -1,0 +1,193 @@
+﻿
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    flex: 1;
+    padding-bottom: 10px; /* Adjust the padding to match the height of your footer */
+}
+
+.form-control {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #d3d3d3;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    color: #52595d;
+    margin-bottom: 5px;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+
+.Delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    width: 65%;
+    text-align: justify;
+    margin: 40px auto;
+}
+
+    .Delete h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .Delete p {
+        margin-bottom: 15px;
+    }
+
+    .Delete a {
+        color: #1e90ff;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+        .Delete a:hover {
+            text-decoration: underline;
+        }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .table th, .table td {
+        border: 1px solid #d3d3d3;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: whitesmoke;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .table tr:hover {
+        background-color: #f5f5f5;
+    }
+
+<style >
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 100%;
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid;
+    border-color: #007bff;
+}
+
+.button-style-yellow {
+    display: inline-block;
+    padding: 7x 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid;
+    border-color: darkorange;
+}
+
+.button-style-red {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid;
+    border-color: red;
+}
+
+.button-style-black {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid;
+    border-color: black;
+}
+
+.control-label {
+    display: inline-block;
+    text-align: right;
+    padding-bottom: 10px; /* Align the text to the right for proper spacing */
+}
+
+.form-group {
+    width: 70%; /* Set the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange children elements vertically */
+    align-items: flex-start;
+}
+
+.tes img {
+    height: 30px;
+    width: 30px;
+}
