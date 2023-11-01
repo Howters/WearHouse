@@ -25,7 +25,7 @@ namespace WearHouse.Controllers
             var key = _configuration.GetSection("0e0f8ebeb0cf105300ebf67ec6eef2be").Value;
 
             // API through RestSharp
-            var client = new RestClient($"http://api.openweathermap.org/data/2.5/forecast?q=Jakarta&appid=0e0f8ebeb0cf105300ebf67ec6eef2be&units=metric");
+            var client = new RestClient($"http://api.openweathermap.org/data/2.5/forecast?q=Jakarta&appid=&units=metric");
             var request = new RestRequest(RestSharp.Method.GET);
             IRestResponse responseCurrent = client.Execute(request);
 
