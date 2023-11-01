@@ -1,10 +1,13 @@
 ﻿@using Microsoft.AspNetCore.Identity
-
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
+@model WearHouse.Models.Weather
 
 @{
     ViewData["Title"] = "Home Page";
+
+    var data = ViewBag.Data;
+    var num = 2;
 }
 
 @section Head {
@@ -14,7 +17,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <div class="row">
-        <div class="col-md-4">
+        <div class="wrapper">
                     <div class="login">
                         <div class="dashb_head">
                             <div class="dashb_head_text">Dashboard</div>
@@ -22,6 +25,16 @@
                     <div class="input_login">
                         You are logged in!
                     </div>
+                <div class="weather-container">
+                    <h4>@data[0].CityName, @data[0].Country</h4>
+                    <div class="date_info">
+                        <h4 id="current_date"></h4>
+                        <h3 id="current_time"></h3>
+                    </div>
+                    <h2>@data[0].Temp °C</h2>
+                    <img class="weather-icon" src="@data[0].Wicon" alt="">
+                    <h4>@data[0].Description</h4>
+                </div>
 
                     </div>
         </div>
@@ -30,8 +43,6 @@
 }
 else
 {
-    <div class="row">
-        <div class="col-md-4">
             <div class="login">
                 <div class="dashb_head">
                     <div class="dashb_head_text">WearHouse</div>
@@ -40,7 +51,22 @@ else
                     Welcome!
                 </div>
 
-            </div>
-        </div>
     </div>
+
 }
+<script>
+    let date = document.getElementById("current_date");
+    let time = document.getElementById("current_time");
+    let d = new Date();
+    date.innerHTML = d.toLocaleDateString();
+
+    setInterval(() =>{
+        let d = new Date();
+        time.innerHTML = d.toLocaleTimeString();
+    },1000)
+
+
+
+
+
+</script>

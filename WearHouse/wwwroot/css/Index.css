@@ -173,6 +173,7 @@ ul {
         color: white;
     }
 
+
 /* Button Red */
 .btn-red {
     display: flex;
@@ -225,7 +226,7 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30%;
-    height: 25%;
+    height: 30%;
     background-color: white;
     border-radius: 6px;
     border: 1px solid #ddd;
@@ -294,7 +295,6 @@ input {
     display: flex;
     align-items: center;
     justify-content: end;
-/*    height: 20px;*/
     border-top: 1px solid #ddd;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;

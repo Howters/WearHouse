@@ -12,8 +12,8 @@ using WearHouse.Database;
 namespace WearHouse.Migrations
 {
     [DbContext(typeof(WearHouseContext))]
-    [Migration("20231028070500_create_users_table")]
-    partial class create_users_table
+    [Migration("20231031051307_create_tables")]
+    partial class create_tables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

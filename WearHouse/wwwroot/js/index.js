@@ -73,6 +73,10 @@ $(document).ready(function () {
 
             event.preventDefault();
         }
+        else if (categoryNameValue.length > 255) {
+            errorSpan.text('Category Name must be lower than 255 characters!');
+            event.preventDefault();
+        }
     });
 
     $('.submit-edit').click(function (event) {
@@ -81,7 +85,11 @@ $(document).ready(function () {
         var errorSpan = categoryNameField.next('.text-danger');
 
         if (categoryNameValue === '') {
-            errorSpan.text('Category dddName is required');
+            errorSpan.text('Category Name is required');
+            event.preventDefault();
+        }
+        else if (categoryNameValue.length > 255) {
+            errorSpan.text('Category Name must be lower than 255 characters!');
             event.preventDefault();
         }
     });
@@ -99,7 +107,6 @@ $(document).ready(function () {
     });
     closePop.click(closePopDeletes);
     overlay.click(closePopDeletes);
-
 
 
     closePop.click(closePopDeletes);

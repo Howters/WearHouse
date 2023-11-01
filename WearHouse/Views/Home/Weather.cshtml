@@ -1,0 +1,16 @@
+﻿@model WearHouse.Models.Weather
+
+
+@{
+    ViewBag.Title = "Forecast";
+    var data = ViewBag.Data;
+    var num = 2;
+}
+
+<title>Weather</title>
+<h1 "><span>@data[0].CityName, @data[0].Country, <br> Temp: @data[0].Temp C</span></h1>
+<img src="@data[0].Wicon" alt="Alternate Text" />
+<h1> @data[0].Description</h1>
+<div>
+    
+</div>
